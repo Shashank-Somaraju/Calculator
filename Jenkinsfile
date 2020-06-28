@@ -1,10 +1,10 @@
 pipeline{
- environment {
-    registry = "shashanksomaraju/calculator"
-    registryCredential ='Dockerhub'
-    dockerImage = ''
-    dockerImageLatest = ''
-  }
+ 	environment {
+    	registry = "shashanksomaraju/calculator"
+    	registryCredential ='Dockerhub'
+    	dockerImage = ''
+    	dockerImageLatest = ''
+ 	}
     agent any
     stages {
         stage('Stage I - Clone from github'){
