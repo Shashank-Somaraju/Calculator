@@ -29,19 +29,19 @@ pipeline{
             }
             
             post {
-                success {
-                    echo 'Testing Successful'
+                always {
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
-        stage('Stage IV - Make Docker Image & Push') {
+        stage('Stage IV - Make Docker Image') {
             steps{
                 script {
                     dockerImage=docker.build(registry)
                 }
             }
         }
-        stage('Stage V - Make Docker Image & Push') {
+        stage('Stage V - Push Docker Image') {
             steps{
                 script {
                       docker.withRegistry( '', registryCredential ) {
