@@ -38,13 +38,20 @@ pipeline{
             steps{
                 script {
                     dockerImage=docker.build(registry)
-                    docker.withRegistry( '', registryCredential ) {
+                }
+            }
+        }
+        stage('Stage V - Make Docker Image & Push') {
+            steps{
+                script {
+                      docker.withRegistry( '', registryCredential ) {
                         dockerImage.push()
                     }
                 }
             }
         }
-        stage('Stage V - Trigger Rundeck'){
+        
+        stage('Stage VI - Trigger Rundeck'){
             steps{
                 script {
                     step([  $class: "RundeckNotifier",
