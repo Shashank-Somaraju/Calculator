@@ -1,7 +1,7 @@
 pipeline{
  	environment {
     	registry = "shashanksomaraju/calculator"
-    	registryCredential ='Dockerhub'
+    	registryCredential ="Dockerhub"
     	dockerImage = ''
     	dockerImageLatest = ''
  	}
@@ -37,7 +37,7 @@ pipeline{
         stage('Stage IV - Make Docker Image & Push') {
             steps{
                 script {
-                    dockerImage=docker.build() registry + ":latest"
+                    dockerImage=docker.build(registry)
                     docker.withRegistry( '', registryCredential ) {
                         dockerImage.push()
                     }
