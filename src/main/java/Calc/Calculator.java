@@ -1,12 +1,18 @@
 package Calc;
-
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
 import java.util.Scanner; 
 
 public class Calculator {
 
-	public static void main(String[] args){
-		Scanner in = new Scanner(System.in); 
+	public static void main(String[] args) throws Exception{
+		boolean append = true;
+	    FileHandler handler = new FileHandler("/home/shashank/Ddesktop/default.log", append);
+	    Logger logger = Logger.getLogger("");
+        logger.addHandler(handler);
+		//Scanner in = new Scanner(System.in); 
 		System.out.println("1 + 4 =" + add(1,4));
+		logger.info("1 + 4 =" + add(1,4));
 		System.out.println("16 - 28 =" + subtract(16,28));
 		System.out.println("1 / 8 =" + divide(1,8));
 		System.out.println("1009 * 43 =" + multiply(1009,43));
