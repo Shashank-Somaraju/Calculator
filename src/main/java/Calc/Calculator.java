@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Calculator {
 
 	public static void main(String[] args){
-		 //Scanner in = new Scanner(System.in); 
+		//Scanner in = new Scanner(System.in); 
 		System.out.println("1 + 4 =" + add(1,4));
 	  	System.out.println("16 - 28 =" + subtract(16,28));
 		System.out.println("1 / 8 =" + divide(1,8));
