@@ -10,6 +10,8 @@ public class Calculator {
 		System.out.println("1 / 8 =" + divide(1,8));
 		System.out.println("1009 * 43 =" + multiply(1009,43));
 		System.out.println("297 + 8789 =" + add(297,8789));
+		System.out.println("297 + 8780 =" + add(297,8789));
+		
 		/*
 		while(true) {
 			System.out.println("Select an option from below ?");
