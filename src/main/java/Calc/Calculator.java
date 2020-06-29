@@ -6,7 +6,12 @@ public class Calculator {
 
 	public static void main(String[] args){
 		Scanner in = new Scanner(System.in); 
-
+		System.out.println("1 + 4 =" + add(1,4));
+		System.out.println("16 - 28 =" + subtract(16,28));
+		System.out.println("1 / 0 =" + divide(1,0));
+		System.out.println("1009 * 43 =" + multiply(1009,43));
+		System.out.println("297 + 8789 =" + add(297,8789));
+		/*
 		while(true) {
 			System.out.println("Select an option from below ?");
 			System.out.println("1) Addition");
@@ -14,7 +19,7 @@ public class Calculator {
 			System.out.println("3) Multiplication");
 			System.out.println("4) Division");
 			System.out.println("5) Exit");
-			int opt = in.nextInt(); 
+			int opt = in.nextInt();
 			if(opt < 1 || opt > 5) System.out.println("Option should be between 1 and 5. Try again!");
 			else if(opt == 5)break;
 			else {
@@ -39,7 +44,7 @@ public class Calculator {
 					System.out.println(op1 + " / " + op2 + " = " + result);
 				}
 			}
-		}
+		}*/
 		
 	}
 
