@@ -21,7 +21,7 @@ public class Calculator {
 			int opt = in.nextInt();
 			if(opt < 1 || opt > 5) System.out.println("Option should be between 1 and 5. Try again!");
 			else if(opt == 5)break;
-			else {
+	 		else {
 				System.out.print("Enter operand 1: ");
 				int op1 = in.nextInt(); 
 				System.out.print("Enter operand 2: ");
